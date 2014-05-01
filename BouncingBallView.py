@@ -8,9 +8,9 @@ from OpenGL.GL import *
 
 refresh = 30
 time = 0
-screenWidth = 500
+screenWidth = 1350
 screenHeight = 700
-radius = 2.5
+radius = 2
 left = 0.0
 right = 0.0
 bottom = 0.0
@@ -59,16 +59,16 @@ def reshape(w, h):
    glMatrixMode (GL_PROJECTION)
    glLoadIdentity()
 
-   if w <= h:
-      left = -2.5
-      right = 2.5
-      bottom = -2.5 * h/w
-      top = 2.5 * h/w
+   if w > h:
+      left = -20
+      right = 20
+      bottom = -20 * h/w
+      top = 20 * h/w
    else:
-      left = 2.5 * w/h
-      right = 2.5 * w/h
-      bottom = -2.5
-      top = 2.5
+      left = 20 * w/h
+      right = 20 * w/h
+      bottom = -20
+      top = 20
 
    glOrtho(left,right,bottom,top, -10.0, 10.0)
 
@@ -92,7 +92,7 @@ if __name__ == '__main__':
    glutTimerFunc(0, Timer, 0)
    glutKeyboardFunc(BouncingBallController.keyEvent)
    glutSpecialFunc(BouncingBallController.specialKeyEvent)
-   BouncingBallModel.addObjects('glutSolidSphere', [0,5,0], 1000000, [0.0,0.1,0])
+   BouncingBallModel.addObjects('glutSolidSphere', [0,5,0], 0, [0.0,0.1,0])
 
    print "Instructions:"
    print "~ To pause or restart the ball press the space bar"

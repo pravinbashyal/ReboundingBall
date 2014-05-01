@@ -13,15 +13,15 @@ def keyEvent(key, x, y):
 def specialKeyEvent(key,x,y):
     #Left arrow to decrease x velocity
     if key == GLUT_KEY_LEFT:
-        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][0] - .1, 0)
+        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][0] - .8, 0)
     #Right arrow to increase x velocity
     elif key == GLUT_KEY_RIGHT:
-        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][0] + .1, 0)
+        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][0] + .8, 0)
     #Up arrow to increase y velocity
     elif key == GLUT_KEY_UP:
-        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][1] + .25, 1)
+        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][1] + .8, 1)
     #Down arrow to decrease y velocity
     elif key == GLUT_KEY_DOWN:
-        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][1] - .1, 1)
+        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][1] - .5, 1)
 
-
+#

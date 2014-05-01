@@ -52,7 +52,7 @@ def updateObject(obj,t):
         #print "bottom="+`bottom`
 
       #if direction=='up':
-        v[1]=v[1]-0.01
+        v[1]=v[1]-0.06
         #print v[1]
 
 
@@ -70,11 +70,9 @@ def updateObject(obj,t):
 
         elif y < bottom:
             y = bottom
-            v[1] = -v[1]-0.07
-            if v[0]<0:
-                v[0]=v[0]-v[0]/7
-            elif v[0]>0:
-                v[0]=v[0]-v[0]/7
+            v[1] = -v[1]-0.3
+            if v[0]!=0:
+                v[0]=v[0]-v[0]/9
             else:
                 v[0]=0
 
