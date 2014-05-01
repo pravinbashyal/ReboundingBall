@@ -62,7 +62,7 @@ def reshape(w, h):
    if w > h:
       left = -20
       right = 20
-      bottom = -20 * h/w
+      bottom = -20 * h/w #10.37
       top = 20 * h/w
    else:
       left = 20 * w/h
@@ -92,7 +92,8 @@ if __name__ == '__main__':
    glutTimerFunc(0, Timer, 0)
    glutKeyboardFunc(BouncingBallController.keyEvent)
    glutSpecialFunc(BouncingBallController.specialKeyEvent)
-   BouncingBallModel.addObjects('glutSolidSphere', [0,5,0], 0, [0.0,0.1,0])
+   glutMouseFunc(BouncingBallController.onClick)
+   BouncingBallModel.addObjects('glutSolidSphere', [0,0,0], 0, [0.0,0.1,0])
 
    print "Instructions:"
    print "~ To pause or restart the ball press the space bar"
