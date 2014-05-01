@@ -101,4 +101,5 @@ if __name__ == '__main__':
    print "~ To increase the speed in the y direction, press the up arrow"
    print "~ To decrease the speed in the x direction, press the down arrow"
    glutMainLoop()
+   #
 

@@ -24,3 +24,4 @@ def specialKeyEvent(key,x,y):
     elif key == GLUT_KEY_DOWN:
         BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][1] - .1, 1)
 
+#

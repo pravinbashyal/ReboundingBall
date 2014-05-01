@@ -82,3 +82,4 @@ def updateObject(obj,t):
     print objects[obj]['position']
 
     return objects[obj]['position']
+    #

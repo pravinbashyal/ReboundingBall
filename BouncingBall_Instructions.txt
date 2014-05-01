@@ -28,3 +28,4 @@ The BouncingBall program allows you to pause or restart the bouncing ball and to
 * To increase the speed in the x direction, press the right arrow
 * To increase the speed in the y direction, press the up arrow
 * To decrease the speed in the x direction, press the down arrow
+*
