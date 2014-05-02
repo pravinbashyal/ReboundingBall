@@ -1,13 +1,13 @@
-#BouncingBall
+#ReboundingBall
 ============
 
-##Bouncing Ball Instructions
+##Rebounding Ball Instructions
 
 ###Installation
-The BouncingBall program uses python with the PyOpenGL library and is stored on github.
+The ReboundingBall program uses python with the PyOpenGL library and is stored on github.
 
-1. To install the BouncingBall program first checkout the 3 python files from github.</br><br>
-    ```git clone https://github.com/pravinbashyal/BouncingBall.git ```
+1. To install the ReboundingBall program first checkout the 3 python files from github.</br><br>
+    ```git clone https://github.com/pravinbashyal/ReboundingBall.git ```
 2. Install Python (2.5 or higher) if not already installed.
     * http://www.python.org/download/
 3. Install PyOpenGL
@@ -21,13 +21,13 @@ The BouncingBall program uses python with the PyOpenGL library and is stored on 
 
 ###Running
 
-1. To run BouncingBall go into the direcoty you cloned the project into
-2. On the command line run: python BouncingBallView.py
+1. To run ReboundingBall go into the direcoty you cloned the project into
+2. On the command line run: python ReboundingBallView.py
 
 ###Usage
-The BouncingBall program allows you to pause or restart the bouncing ball and to increase or decrease the speed in the x and y direction
+The ReboundingBall program allows you to pause or restart the Rebounding ball and to increase or decrease the speed in the x and y direction
 
-* To pause or restart the bouncing ball press the space bar
+* To pause or restart the Rebounding ball press the space bar
 * To decrease the speed in the x direction, press the left arrow
 * To increase the speed in the x direction, press the right arrow
 * To increase the speed in the y direction, press the up arrow
