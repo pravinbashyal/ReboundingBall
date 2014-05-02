@@ -19,7 +19,7 @@ def onClick(button,state, x, y):
         centerx= BouncingBallModel.objects['glutSolidSphere']['position'][0]
         centery=BouncingBallModel.objects['glutSolidSphere']['position'][1]
         xnew=(x-675)/33.75
-        ynew=(333.33-y)/33.75
+        ynew=(328.57-y)/32.85
         print xnew,ynew
         acceleratex=centerx-xnew
         acceleratey=centery-ynew
@@ -27,8 +27,8 @@ def onClick(button,state, x, y):
         testradius=math.sqrt(testradsquare)
         print testradius
         if testradius<2:
-            BouncingBallModel.changeVelocity('glutSolidSphere',BouncingBallModel.objects['glutSolidSphere']['velocity'][0]+acceleratex/5,0)
-            BouncingBallModel.changeVelocity('glutSolidSphere',BouncingBallModel.objects['glutSolidSphere']['velocity'][1]+acceleratey/3.5,1)
+            BouncingBallModel.changeVelocity('glutSolidSphere',BouncingBallModel.objects['glutSolidSphere']['velocity'][0]+acceleratex/4.3,0)
+            BouncingBallModel.changeVelocity('glutSolidSphere',BouncingBallModel.objects['glutSolidSphere']['velocity'][1]+acceleratey/3.2,1)
 
 
 

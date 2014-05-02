@@ -19,7 +19,7 @@ def setScreenBoundries(l,r,b,t):
 
     left = l
     right = r
-    bottom = b
+    bottom = b+0.02
     top = t
 
 def setPause(p):
@@ -47,12 +47,17 @@ def updateObject(obj,t):
         y = y + v[1]
         z = z + v[2]
 
+
+        #parameters to govern the motion's simulation
+        gravity=0.02
+        frictionfactor=13
+        absorbrebound=0.18
         #print v[0]
         #print y
         #print "bottom="+`bottom`
 
       #if direction=='up':
-        v[1]=v[1]-0.01
+        v[1]=v[1]-gravity
         #print v[1]
 
 
@@ -68,12 +73,11 @@ def updateObject(obj,t):
             v[1] = -v[1]
        #     direction='down'
 
-        elif y < bottom:
-            objects[obj]['time'] = 0
-            y = bottom
-            v[1] = -v[1]-0.14
+        elif y < bottom+0.02:
+            y = bottom+0.02
+            v[1] = -v[1]-absorbrebound
             if v[0]!=0:
-                v[0]=v[0]-v[0]/15
+                v[0]=v[0]-v[0]/frictionfactor
             else:
                 v[0]=0
 
