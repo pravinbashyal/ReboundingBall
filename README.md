@@ -19,11 +19,12 @@ The BouncingBall program uses python with the PyOpenGL library and is stored on 
         ii. cd PyOpenGL-3.0.*
         iii. python setup.py install.
 
-Running
+###Running
+
 1. To run BouncingBall go into the direcoty you cloned the project into
 2. On the command line run: python BouncingBallView.py
 
-Usage
+###Usage
 The BouncingBall program allows you to pause or restart the bouncing ball and to increase or decrease the speed in the x and y direction
 
 * To pause or restart the bouncing ball press the space bar
