@@ -53,8 +53,8 @@ def display():
 #####################################################################
 
 #####################################################################
-
-   time = time + .25
+   if ReboundingBallModel.pause==False:
+      time = time + .25
    if spherePos[1]<=-8.96:
       if time/10>best:
          best=time/10
@@ -73,7 +73,7 @@ def display():
    glTranslate(00, 0.0, 0.0)
    y = -400
    x= 1450
-   timestr=("current time in air", `time/10`+"." , "best",`best`)
+   timestr=("current time in air", `time/10` , "best",`best`)
 
    for s in timestr:
      glRasterPos(x, y)

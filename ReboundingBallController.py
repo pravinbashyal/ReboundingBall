@@ -3,14 +3,18 @@
 import math
 import ReboundingBallModel
 from OpenGL.GLUT import *
+import curses
 
 pause = False
 
 def keyEvent(key, x, y):
     #Press the space bar to pause or unpause the boucning ball
-    print `x`+"x ho yo"
+    #print `x`+"x ho yo"
     if key == chr(32):
         ReboundingBallModel.setPause(not ReboundingBallModel.pause)
+        #print pause
+
+
 
 
 def onClick(button,state, x, y):
