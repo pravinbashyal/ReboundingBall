@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
 import sys
-import BouncingBallModel
-import BouncingBallController
+import ReboundingBallModel
+import ReboundingBallController
 from OpenGL.GLUT import *
 from OpenGL.GL import *
 
@@ -44,7 +44,7 @@ def display():
 
    glLoadIdentity() #replaces the current matrix with the identity matrix
 
-   spherePos = BouncingBallModel.updateObject('glutSolidSphere',time)
+   spherePos = ReboundingBallModel.updateObject('glutSolidSphere',time)
 
    glPushMatrix() #pushes the current matrix stack down by one, duplicating the current matrix.
    glTranslatef(spherePos[0], spherePos[1], spherePos[2]) # produces a translation by (x, y, z )
@@ -110,7 +110,7 @@ def reshape(w, h):
 
    glOrtho(left,right,bottom,top, -100, 100) #multiply the current matrix with an orthographic matrix, (left,rifht,bottom,top,nearVal,farVal)
 
-   BouncingBallModel.setScreenBoundries(left+ radius , right - radius, bottom + radius, top - radius) # check the boundary
+   ReboundingBallModel.setScreenBoundries(left+ radius , right - radius, bottom + radius, top - radius) # check the boundary
    glMatrixMode(GL_MODELVIEW) #specify which matrix is current matrix
    glLoadIdentity() #replaces the current matrix with the identity matrix
 
@@ -127,13 +127,13 @@ if __name__ == '__main__':
    glutCreateWindow('Rebounding Ball') # Name of the display window
    init() # init method call to set up the lighting effect
    glutReshapeFunc(reshape) #sets the reshape callback for the current window
-   BouncingBallModel.addObjects('glutSolidSphere', [0,0,0], 0, [0.0,0.1,0])
+   ReboundingBallModel.addObjects('glutSolidSphere', [0,0,0], 0, [0.0,0.1,0])
    glutDisplayFunc(display) #sets the display callback for the current window
    glutTimerFunc(0, Timer, 0) #registers a timer callback to be triggered in a specified number of milliseconds. ,( unsigned int msecs,void (*func)(int value), value)
-   glutKeyboardFunc(BouncingBallController.keyEvent) #keyboard event reader
-   glutSpecialFunc(BouncingBallController.specialKeyEvent) #arrows keys event reader to control the ball movement
-   glutMouseFunc(BouncingBallController.onClick) #mouse event reader
-   #glutPassiveMotionFunc(BouncingBallController.onClick)
+   glutKeyboardFunc(ReboundingBallController.keyEvent) #keyboard event reader
+   glutSpecialFunc(ReboundingBallController.specialKeyEvent) #arrows keys event reader to control the ball movement
+   glutMouseFunc(ReboundingBallController.onClick) #mouse event reader
+   #glutPassiveMotionFunc(ReboundingBallController.onClick)
 
 
    print "Instructions:"
