@@ -12,12 +12,12 @@ The BouncingBall program uses python with the PyOpenGL library and is stored on 
     * http://www.python.org/download/
 3. Install PyOpenGL
     * If you have easy_install:
-        i. On the command line type: easy_install PyOpenGL.
+        - On the command line type: easy_install PyOpenGL.
     * Download PyOpenGL version 3.0.* at http://pypi.python.org/pypi/PyOpenGL
     * Unzip the package downlaoded cd into it and install
-        i. unzip PyOpenGL-3.0.*.zip
-        ii. cd PyOpenGL-3.0.*
-        iii. python setup.py install.
+        - unzip PyOpenGL-3.0.*.zip
+        - cd PyOpenGL-3.0.*
+        - python setup.py install.
 
 ###Running
 
