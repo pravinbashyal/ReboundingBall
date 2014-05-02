@@ -51,9 +51,6 @@ def display():
 
    glFlush() #force execution of GL commands in finite time
    time = time + .25
-   if spherePos[1]<=-9:
-      time=0
-   print time/10
 
 def reshape(w, h):
    global left,right,bottom,top
@@ -95,7 +92,7 @@ if __name__ == '__main__':
    glutTimerFunc(0, Timer, 0) #registers a timer callback to be triggered in a specified number of milliseconds. ,( unsigned int msecs,void (*func)(int value), value)
    glutKeyboardFunc(BouncingBallController.keyEvent) #keyboard event reader
    glutSpecialFunc(BouncingBallController.specialKeyEvent) #arrows keys event reader to control the ball movement
-   glutMouseFunc(BouncingBallController.onClick) #mouse event reader
+   glutMouseFunc(BouncingBallController.on_click) #mouse event reader
    #glutPassiveMotionFunc(BouncingBallController.onClick)
    BouncingBallModel.addObjects('glutSolidSphere', [0,0,0], 0, [0.0,0.1,0])
 

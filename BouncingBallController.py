@@ -28,23 +28,23 @@ def onClick(button,state, x, y):
         print testradius
         if testradius<2:
             BouncingBallModel.changeVelocity('glutSolidSphere',BouncingBallModel.objects['glutSolidSphere']['velocity'][0]+acceleratex/5,0)
-            BouncingBallModel.changeVelocity('glutSolidSphere',BouncingBallModel.objects['glutSolidSphere']['velocity'][1]+acceleratey/5,1)
+            BouncingBallModel.changeVelocity('glutSolidSphere',BouncingBallModel.objects['glutSolidSphere']['velocity'][1]+acceleratey/3.5,1)
 
 
 
 def specialKeyEvent(key,x,y):
     #Left arrow to decrease x velocity
     if key == GLUT_KEY_LEFT:
-        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][0] - .8, 0)
+        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][0] - .4, 0)
     #Right arrow to increase x velocity
     elif key == GLUT_KEY_RIGHT:
-        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][0] + .8, 0)
+        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][0] + .4, 0)
     #Up arrow to increase y velocity
     elif key == GLUT_KEY_UP:
-        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][1] + .8, 1)
+        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][1] + .4, 1)
     #Down arrow to decrease y velocity
     elif key == GLUT_KEY_DOWN:
-        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][1] - .5, 1)
+        BouncingBallModel.changeVelocity('glutSolidSphere', BouncingBallModel.objects['glutSolidSphere']['velocity'][1] - .4, 1)
 
 '''def specialMouseKeyEvent(x,y,centerx,centery,radius):'''
 
