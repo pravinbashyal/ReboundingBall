@@ -1,6 +1,6 @@
 #BouncingBall
 ============
-*
+
 ##Bouncing Ball Instructions
 
 ###Installation
