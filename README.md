@@ -9,7 +9,7 @@ Rebounding ball is a small stress relief game developed by Kathmandu University 
 The ReboundingBall program uses python with the PyOpenGL library and is stored on github.
 
 1. To install the ReboundingBall program first checkout the 3 python files from github.</br><br>
-    ```git clone https://github.com/pravinbashyal/ReboundingBall.git ```
+    ```$git clone https://github.com/pravinbashyal/ReboundingBall.git ```
 2. Install Python (2.5 or higher) if not already installed.
     * http://www.python.org/download/
 3. Install PyOpenGL
@@ -25,7 +25,7 @@ The ReboundingBall program uses python with the PyOpenGL library and is stored o
 
 1. To run ReboundingBall go into the directory you cloned the project into.
 2. On the command line run:<br>
- ```python ReboundingBallView.py```
+ ```$python ReboundingBallView.py```
 
 ###Usage
 The ReboundingBall program allows you to pause or restart the Rebounding ball and change the direction of the ball by mouse pointer click. Try to hover the ball as long as you can in the air for getting better score.
