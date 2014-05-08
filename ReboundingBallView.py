@@ -6,6 +6,7 @@ import ReboundingBallController
 from OpenGL.GLUT import *
 from OpenGL.GL import *
 
+filename='score'
 refresh = 30
 time = 0
 best = 0
@@ -17,6 +18,7 @@ right = 0.0
 bottom = 0.0
 top = 0.0
 PROMPT='SOME PROMPT'
+i=0
 
 # Initialize material property and light source.
 def init():
@@ -35,9 +37,20 @@ def init():
    glEnable(GL_LIGHT0) #To enable lights from a single source
    glEnable(GL_DEPTH_TEST) #to enable a write to the depth buffer (z-buffer)
 
+def score():
+   f=open(filename,'rU')
+   score=f.read()
+   return float(score.split()[0])
+
+def storebest(bestscore):
+   f=open(filename,'w')
+   print bestscore
+   f.write(`bestscore`)
+
 def display():
    global time
    global best
+   global i
 
 
    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT) #clear buffer to preset values
@@ -53,11 +66,17 @@ def display():
 #####################################################################
 
 #####################################################################
+
+   if i==0:
+      best=score()
+      print best
+      i=i+1
    if ReboundingBallModel.pause==False:
       time = time + .25
    if spherePos[1]<=-8.96:
       if time/10>best:
          best=time/10
+         storebest(best)
       time=0
 
    glClearColor(0.0, 0.0, 0.0, 0.0)
@@ -119,8 +138,6 @@ def Timer(value):
    glutTimerFunc(refresh, Timer, 0) #registers a timer callback to be triggered in a specified number of milliseconds.
 
 if __name__ == '__main__':
-
-   best=0
    glutInit(sys.argv)
    glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH) # double buffer window, rgb color mode, window with a depth buffer
    glutInitWindowSize (screenWidth, screenHeight) #initialize the size of the display window
@@ -130,17 +147,14 @@ if __name__ == '__main__':
    ReboundingBallModel.addObjects('glutSolidSphere', [0,0,0], 0, [0.0,0.1,0])
    glutDisplayFunc(display) #sets the display callback for the current window
    glutTimerFunc(0, Timer, 0) #registers a timer callback to be triggered in a specified number of milliseconds. ,( unsigned int msecs,void (*func)(int value), value)
-   glutKeyboardFunc(ReboundingBallController.keyEvent) #keyboard event reader
-   glutSpecialFunc(ReboundingBallController.specialKeyEvent) #arrows keys event reader to control the ball movement
+   #glutKeyboardFunc(ReboundingBallController.keyEvent) #keyboard event reader
+   #glutSpecialFunc(ReboundingBallController.specialKeyEvent) #arrows keys event reader to control the ball movement
    glutMouseFunc(ReboundingBallController.onClick) #mouse event reader
    #glutPassiveMotionFunc(ReboundingBallController.onClick)
 
 
    print "Instructions:"
    print "~ To pause or restart the ball press the space bar"
-   print "~ To decrease the speed in the x direction, press the left arrow"
-   print "~ To increase the speed in the x direction, press the right arrow"
-   print "~ To increase the speed in the y direction, press the up arrow"
-   print "~ To decrease the speed in the x direction, press the down arrow"
    print "~OR USE YOUR MOUSE POINTER CLICK TO MANIPULATE THE REBOUND DIRECTION"
+   print "~stay as long as u can in the air."
    glutMainLoop() #enters the GLUT event processing loop. This routine should be called at most once in a GLUT program.

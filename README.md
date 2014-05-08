@@ -1,6 +1,8 @@
 #ReboundingBall
 ============
 
+Rebounding ball is a small stress relief game developed by Kathmandu University undergraduate students Pravin Bashyal and Aavash Rayamajhi as a miniproject for Computer Graphics.
+
 ##Rebounding Ball Instructions
 
 ###Installation
@@ -25,11 +27,7 @@ The ReboundingBall program uses python with the PyOpenGL library and is stored o
 2. On the command line run: python ReboundingBallView.py
 
 ###Usage
-The ReboundingBall program allows you to pause or restart the Rebounding ball and to increase or decrease the speed in the x and y direction
+The ReboundingBall program allows you to pause or restart the Rebounding ball and change the direction of the ball by mouse pointer click. Try to hover the ball as long as you can in the air for getting better score.
 
 * To pause or restart the Rebounding ball press the space bar
-* To decrease the speed in the x direction, press the left arrow
-* To increase the speed in the x direction, press the right arrow
-* To increase the speed in the y direction, press the up arrow
-* To decrease the speed in the x direction, press the down arrow
 * OR USE YOUR MOUSE POINTER CLICK TO MANIPULATE THE REBOUND DIRECTION
