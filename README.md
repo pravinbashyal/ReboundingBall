@@ -18,8 +18,8 @@ The ReboundingBall program uses python with the PyOpenGL library and is stored o
     * Download PyOpenGL version 3.0.* at http://pypi.python.org/pypi/PyOpenGL
     * Unzip the package downlaoded cd into it and install
         - unzip PyOpenGL-3.0.*.zip
-        - cd PyOpenGL-3.0.*
-        - python setup.py install.
+        - ```$ cd PyOpenGL-3.0.*```
+        - ```$ python setup.py install```
 
 ###Running
 
