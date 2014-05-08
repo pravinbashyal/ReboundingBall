@@ -15,8 +15,6 @@ def keyEvent(key, x, y):
         #print pause
 
 
-
-
 def onClick(button,state, x, y):
     #Press the space bar to pause or unpause the boucning ball
     if button == GLUT_LEFT_BUTTON:

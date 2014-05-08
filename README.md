@@ -23,7 +23,7 @@ The ReboundingBall program uses python with the PyOpenGL library and is stored o
 
 ###Running
 
-1. To run ReboundingBall go into the direcoty you cloned the project into
+1. To run ReboundingBall go into the directory you cloned the project into.
 2. On the command line run: python ReboundingBallView.py
 
 ###Usage
